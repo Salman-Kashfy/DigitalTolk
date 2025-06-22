@@ -8,15 +8,22 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        // Call seeders for core data first (languages, tags, groups)
+        $this->call([
+            LanguageSeeder::class,
+            TranslationTagSeeder::class,
+            TranslationGroupSeeder::class,
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // Call the TranslationSeeder for bulk data
+        // Make sure it's called after its dependencies (groups, tags) are seeded
+        $this->call([
+            TranslationSeeder::class,
+            // UserSeeder::class,
+        ]);
     }
 }

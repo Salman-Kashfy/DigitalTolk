@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Modules\Translation\Http\Controllers\TranslationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/health', function (Request $request) {
+    return response()->json(['status' => true, 'message' => 'Hello world!']);
+});
+
+Route::apiResource('translations', TranslationController::class);
+//Route::get('translations/export', TranslationController::class)->name('translations.export');
+Route::get('translations/export', [TranslationController::class, 'export'])->name('translations.export');
