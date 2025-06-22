@@ -1,6 +1,11 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 ## Overview
+
+Project demonstration Video
+
+https://www.loom.com/share/9f70ab67831e43809168f7b40a789933?sid=04420c4d-19f1-42e6-8f36-7b4268cc2859
+
 All tasks mentioned in the Tasks section of the pdf doc is completed 
 
 - Store translations for multiple locales (e.g., en , fr , es ) with the ability to add new
