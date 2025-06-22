@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         // Make sure it's called after its dependencies (groups, tags) are seeded
         $this->call([
             TranslationSeeder::class,
-            // UserSeeder::class,
+             UserSeeder::class,
         ]);
     }
 }
