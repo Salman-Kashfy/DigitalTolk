@@ -41,8 +41,8 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
 
-    Route::apiResource('translations', TranslationController::class);
     Route::get('translations/export', [TranslationController::class, 'export'])->name('translations.export');
+    Route::apiResource('translations', TranslationController::class);
 
     Route::get('/user', [AuthController::class, 'user']);
     Route::post('/logout', [AuthController::class, 'logout']);
