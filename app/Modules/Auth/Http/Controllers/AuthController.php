@@ -37,7 +37,6 @@ class AuthController extends Controller
 
     public function user(Request $request): \Illuminate\Http\JsonResponse
     {
-        // The authenticated user is available via $request->user() or auth()->user()
         return response()->json($request->user());
     }
 
